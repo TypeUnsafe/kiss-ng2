@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiss <3 ng2</title>
+  <link rel="stylesheet" href="css/kiss.css">
+</head>
+<body>
+
+  <hello>Loading...</hello>
+
+  <!-- libraries -->
+  <script src="js/vendors/traceur-runtime.min.js"></script>
+  <script src="js/vendors/typescript.js"></script>
+
+  <script src="js/vendors/system.js"></script>
+  <script src="js/vendors/angular2.min.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript'
+    });
+
+    System.import('js/hello.ts').then(function() {
+      console.log("loaded");
+    }).catch(function(error) {
+      console.error(error);
+    });
+  </script>
+</body>
+</html>
